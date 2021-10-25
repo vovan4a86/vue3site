@@ -42,17 +42,3 @@ Vue.component('about-component', require('./components/AboutComponent.vue').defa
 const app = new Vue({
     el: '#app',
 });
-
-const links = document.querySelectorAll('.nav-link');
-const nav = document.querySelector('.nav.nav-pills');
-
-nav.addEventListener('click', e => {
-    if (!e.target.classList.contains('active')) {
-        e.target.classList.add('active')
-    }
-})
-
-links.forEach(link => ()=> {
-    link.addEventListener('click', e => {
-    })
-})

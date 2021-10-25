@@ -8,10 +8,12 @@
 
             <ul class="nav nav-pills">
                 <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="/features" class="nav-link">Features</a></li>
+                <li class="nav-item"><a href="/features" :class="cls" @click="linkClick">Features</a></li>
                 <li class="nav-item"><a href="/pricing" class="nav-link">Pricing</a></li>
                 <li class="nav-item"><a href="/album" class="nav-link">Album</a></li>
-                <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="/about" class="@linkactive('/about')">About</a></li>
+<!--                https://laravel.demiart.ru/detecting-active-links-in-menu/-->
+<!--                https://si-dev.com/ru/blog/how-to-create-blade-directives-->
             </ul>
         </header>
     </div>
@@ -19,7 +21,17 @@
 
 <script>
 export default {
-    name: "HeaderComponent.vue"
+    name: "HeaderComponent.vue",
+    data() {
+        return {
+            cls: 'nav-link active'
+        }
+    },
+    methods: {
+        linkClick(event) {
+            console.log('linkClick', event)
+        }
+    }
 }
 </script>
 
