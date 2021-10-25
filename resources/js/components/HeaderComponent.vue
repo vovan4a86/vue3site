@@ -21,8 +21,6 @@
 export default {
     name: "HeaderComponent.vue"
 }
-const links = document.querySelectorAll('.nav-link');
-console.log(links);
 </script>
 
 <style scoped>

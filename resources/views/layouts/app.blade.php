@@ -9,20 +9,19 @@
 <body>
 <div id="app">
     <header class="header">
-        @yield('header')
+        <header-component></header-component>
     </header>
+
 
     <section>
         @yield('content')
     </section>
 
-
     <footer class="footer">
-        @yield('footer')
+        <footer-component></footer-component>
     </footer>
 </div>
 <script src="{{ asset('js/app.js') }}"></script>
-{{--<script src="{{ asset('js/bootstrap.bundle.js') }}"></script>--}}
 
 </body>
 </html>

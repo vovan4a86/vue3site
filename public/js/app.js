@@ -2471,8 +2471,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "HeaderComponent.vue"
 });
-var links = document.querySelectorAll('.nav-link');
-console.log(links);
 
 /***/ }),
 
@@ -2703,6 +2701,18 @@ vue__WEBPACK_IMPORTED_MODULE_2__["default"].component('about-component', __webpa
 
 var app = new vue__WEBPACK_IMPORTED_MODULE_2__["default"]({
   el: '#app'
+});
+var links = document.querySelectorAll('.nav-link');
+var nav = document.querySelector('.nav.nav-pills');
+nav.addEventListener('click', function (e) {
+  if (!e.target.classList.contains('active')) {
+    e.target.classList.add('active');
+  }
+});
+links.forEach(function (link) {
+  return function () {
+    link.addEventListener('click', function (e) {});
+  };
 });
 
 /***/ }),
