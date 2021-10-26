@@ -8,19 +8,21 @@
 </head>
 <body>
 <div id="app">
-    <header class="header">
-        <header-component></header-component>
-    </header>
+
+        <header class="header">
+            <header-component></header-component>
+        </header>
 
 
-    <section>
-        @yield('content')
-    </section>
+        <section>
+            @yield('content')
+        </section>
 
-    <footer class="footer">
-        <footer-component></footer-component>
-    </footer>
+        <footer class="footer">
+            <footer-component></footer-component>
+        </footer>
 </div>
+
 <script src="{{ asset('js/app.js') }}"></script>
 
 </body>
